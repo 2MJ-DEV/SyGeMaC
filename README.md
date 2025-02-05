@@ -97,5 +97,17 @@ Correctifs et évolutions post-déploiement.
 - Mise à jour des fonctionnalités selon les retours des utilisateurs.
 
 ---
+## **🔹 Fonctionnalités principales :** 
+
+✅ **Gestion des patients** : Enregistrement, suivi médical, antécédents et historique des consultations.  
+✅ **Planification des rendez-vous** : Prise de rendez-vous en ligne, rappels automatiques et gestion des disponibilités des médecins.  
+✅ **Dossiers médicaux numériques** : Stockage sécurisé des diagnostics, prescriptions et résultats d’examens.  
+✅ **Facturation et paiements** : Suivi des frais médicaux, génération de factures et gestion des modes de paiement.  
+✅ **Gestion du personnel médical** : Attribution des patients aux médecins, suivi des horaires et des interventions.  
+✅ **Gestion des stocks de médicaments** : Suivi des entrées/sorties et alertes en cas de rupture de stock.  
+✅ **Tableau de bord et statistiques** : Analyse des performances de la clinique avec rapports détaillés.  
+
+---
+
 
 Ce cahier des charges servira de référence tout au long du développement pour garantir la qualité et l'adéquation du système avec les besoins de l’hôpital.
