@@ -1,24 +1,41 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import './style.css'; 
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const mainHeader = document.querySelector("#header");
+const menuBtn = document.querySelector("#menu-btn");
 
-setupCounter(document.querySelector('#counter'))
+menuBtn.addEventListener("click", () => {
+  mainHeader.dataset.state = mainHeader.dataset.state === "active" ? "closed" : "active";
+})
+
+
+const html = document.documentElement;
+const toggleButton = document.getElementById('toggleButton');
+const sunIcon = document.getElementById('sunIcon');
+const moonIcon = document.getElementById('moonIcon');
+
+// Vérifier si le mode sombre est déjà activé (par exemple, dans localStorage)
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+if (isDarkMode) {
+  html.classList.add('dark');
+  sunIcon.style.display = 'block';
+  moonIcon.style.display = 'none';
+} else {
+  sunIcon.style.display = 'none';
+  moonIcon.style.display = 'block';
+}
+
+toggleButton.addEventListener('click', () => {
+  html.classList.toggle('dark');
+
+  // Enregistrer le mode dans localStorage
+  localStorage.setItem('darkMode', html.classList.contains('dark'));
+
+   // Afficher/masquer les icônes
+   if (html.classList.contains('dark')) {
+    sunIcon.style.display = 'block';
+    moonIcon.style.display = 'none';
+  } else {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+  }
+});
